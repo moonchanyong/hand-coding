@@ -5,7 +5,8 @@
 
 ### mergesort
 
-<!-- immutable 원칙 안지킴, index저장하는 변수 만드는게 더 효율적이지만 간편한 코딩을위해  -->
+<!-- 추가 최적화 배열의길이가 0면 바로 합치기 -->
+<!-- 각 arr 별 index 가르키rl  -->
 function merge(arrA, arrB) {
   ret = [];
   while(arrA.length !=0 || arrB.length != 0)
@@ -26,3 +27,5 @@ function mergeSort(inputArr) {
 ## search
 
 ## named problem
+
+### TSP(boj)
