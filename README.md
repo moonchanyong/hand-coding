@@ -45,6 +45,8 @@ int tsp(int[][] map) {
 
 ## 백엔드
 
+
+
 ### 컴포넌트와 모듈의 차이
 
 * 목적은 공통점 전체시스템을 구성하는 부분부분으로 분해시키는 것
@@ -196,7 +198,19 @@ JRE는 자바 API와 JVM으로 구성되며, JVM의 역할은 자바 앱을 클�
 * 멀티스레드의 경우에도 static은 하나만 공유, 싱글톤이 모든 스레드까지 싱글톤이아니라면 해등 쓰레드 내부에서만해서 스레드 개수만큼 증가
 
 ### 싱글턴이 무엇인가 ? 디자인패턴을 아나 ?
-알아서 공부할게
+
+#### singleton
+``` java
+// 동시성 문제 해결
+public class Singleton{
+  private Singleton() {}
+  // volatile: 컴파일러 옵티마이저가 캐싱하지 못하게 한다. 그러므로 멀티 스레드 환경에서 새로 호출함 
+  private static volatile Singleton singleton = new Singleton();
+  public static Singleton getStingletonObject {
+    return singleton;
+  }
+}
+```
 
 ### 익명클래스와 익명객체를 아나?
 * 무명 클래스 : 하나의 객체만 사용 할 경우, ClassName VarName = new ClassNam {클래수 구현 내용};
