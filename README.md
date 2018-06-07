@@ -204,7 +204,7 @@ JRE는 자바 API와 JVM으로 구성되며, JVM의 역할은 자바 앱을 클�
 // 동시성 문제 해결
 public class Singleton{
   private Singleton() {}
-  // volatile: 컴파일러 옵티마이저가 캐싱하지 못하게 한다. 그러므로 멀티 스레드 환경에서 새로 호출함 
+  // volatile: 컴파일러 옵티마이저가 캐싱하지 못하게 한다. 그러므로 멀티 스레드 환경에서 새로 호출함
   private static volatile Singleton singleton = new Singleton();
   public static Singleton getStingletonObject {
     return singleton;
