@@ -199,7 +199,7 @@ JRE는 자바 API와 JVM으로 구성되며, JVM의 역할은 자바 앱을 클�
 
 ### 싱글턴이 무엇인가 ? 디자인패턴을 아나 ?
 
-#### singleton
+#### singleton(java)
 ``` java
 // 동시성 문제 해결
 public class Singleton{
@@ -208,6 +208,18 @@ public class Singleton{
   private static volatile Singleton singleton = new Singleton();
   public static Singleton getStingletonObject {
     return singleton;
+  }
+}
+```
+#### singleton(es6)
+```javascript
+class Singleton {
+  constructor() {
+    if(!Singleton.instance) {
+      singleton.instance = this;
+      //this.property = value;
+    }
+    return Singleton.instance;
   }
 }
 ```
